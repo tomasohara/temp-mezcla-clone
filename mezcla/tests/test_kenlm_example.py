@@ -46,7 +46,6 @@ class TestKenlmExample(TestWrapper):
 
     """Class for testcase definition"""
     
-    @pytest.mark.skip
     def test_summed_constituent_score(self):
         """Ensures that summed_constituent_score works properly"""
         debug.trace(4, "test_summed_constituent_score()")
@@ -55,7 +54,7 @@ class TestKenlmExample(TestWrapper):
         assert (abs(sentence_score) - abs(THE_MODULE.model.score(sentence)) < 1e-3)
         return
     
-    @pytest.mark.skip
+
     def test_kenlm_example_default(self):
         """Ensures that kenlm_example_default works properly"""
         debug.trace(4, f"test_kenlm_example_default(); self={self}")
@@ -71,7 +70,7 @@ class TestKenlmExample(TestWrapper):
         assert(test1 and test2 and test3)
         return
 
-    @pytest.mark.skip
+
     def test_kenlm_example_round(self):
         """Ensures that kenlm_example_round works properly"""
         debug.trace(4, f"test_kenlm_example_round(); self={self}")
@@ -101,7 +100,7 @@ class TestKenlmExample(TestWrapper):
         assert all([test0, test1, test2, test3])
         return
 
-    @pytest.mark.skip
+
     def test_kenlm_example_verbose(self):
         """Ensures that kenlm_example_verbose works properly"""
         debug.trace(4, f"test_kenlm_example_VERBOSE(); self={self}")
@@ -133,7 +132,6 @@ class TestKenlmExample(TestWrapper):
         return 
 
 
-    @pytest.mark.skip
     def test_kenlm_example_outofvocab(self):
         """Ensures that kenlm_example_outofvocab works properly"""
         debug.trace(4, f"test_kenlm_example_outofvocab(); self={self}")
@@ -186,7 +184,6 @@ class TestKenlmExample(TestWrapper):
         unseen_vocab = list(set(sentence.split(" ")) - set(out_of_vocab_arr))[0]
         assert(unseen_vocab == known_seen_character)
 
-    @pytest.mark.skip
     def test_kenlm_example_precision(self):
         """Ensures that kenlm_example_precision works properly"""
         debug.trace(4, f"test_kenlm_example_precision(); self={self}")

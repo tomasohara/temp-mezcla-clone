@@ -48,8 +48,8 @@ class TestIt(TestWrapper):
     """Class for command-line based testcase definition"""
     script_module = TestWrapper.get_testing_module_name(__file__, THE_MODULE)
 
-    ## OLD: To be fixed
-    @pytest.mark.xfail                   # TODO: remove xfail
+    ## OLD: To be fixed                   
+    # TODO: remove xfail
     ## DEBUG:
     @trap_exception
     def test_data_file(self):
@@ -72,7 +72,6 @@ class TestIt(TestWrapper):
         return
     
     ## TEST 2: Test the vanilla script using a different soundfile (US English)
-    @pytest.mark.skip               # TODO: Fix path for audio_file
     def test_sound_file_us1(self):
         """Ensures that test_sound_file_us1 works properly"""
         debug.trace(4, f"TestIt.test_sound_file_us1(); self={self}")
@@ -83,7 +82,7 @@ class TestIt(TestWrapper):
         return
     
     ## TEST 3: Test the vanilla script using a different soundfile (US English)
-    @pytest.mark.skip               # TODO: Fix path for audio_file    
+   
     def test_sound_file_us2(self):
         """Ensures that test_sound_file_us2 works properly"""
         debug.trace(4, f"TestIt.test_sound_file_us2(); self={self}")
@@ -95,7 +94,7 @@ class TestIt(TestWrapper):
     
     ## TEST 4: Test the script using a different ASR model
     ## NOTE: Skipped due to use of a different model (i.e. large downloads)   
-    @pytest.mark.skip 
+
     def test_sound_file_model(self):
         """Ensures that test_sound_file_model works properly"""
         audio_file = gh.resolve_path("fuzzy-testing-1-2-3.wav")

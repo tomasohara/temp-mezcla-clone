@@ -66,7 +66,7 @@ class TestIt(TestWrapper):
     ## NEW: Revised tests from mezcla/tests/test_huggingface_translation.py
     
     ## Test 1 - Default Run: ES -> EN
-    @pytest.mark.skip
+
     def test_translation_default(self):
         """Ensures that test_translation_default works properly"""
         debug.trace(4, "test_translation_default()")
@@ -78,7 +78,7 @@ class TestIt(TestWrapper):
         return
     
     ## Test 2 - Translation I: NOT_EN -> EN (e.g. Japanese)
-    @pytest.mark.skip
+
     def test_translation_ja2en(self):
         """Ensures that test_translation_ja2en works properly"""
         debug.trace(4, "test_translation_ja2en()")
@@ -91,7 +91,7 @@ class TestIt(TestWrapper):
         return
     
     ## Test 3 - Translation II: EN -> NON_EN (e.g. French)
-    @pytest.mark.skip
+
     def test_translation_en2fr(self):
         """Ensures that test_translation_en2fr works properly"""
         debug.trace(4, "test_translation_en2fr()")
@@ -107,7 +107,7 @@ class TestIt(TestWrapper):
         return
     
     ## Test 4 - Translation III: NON_EN -> NON_EN (e.g. Russian to Arabic)
-    @pytest.mark.skip    
+    
     def test_translation_ru2ar(self):
         """Ensures that test_translation_ru2ar works properly"""
         debug.trace(4, "test_translation_ru2ar()")
@@ -122,7 +122,7 @@ class TestIt(TestWrapper):
 
     ## Test 5 - Translation IV: Using a different model (e.g. t5-small)
     ## NOTE: Default Translation: EN (English) -> DE (German)
-    @pytest.mark.skip    
+    
     def test_translation_t5small(self):
         """Ensures that test_translation_t5small works properly"""
         debug.trace(4, "test_translation_t5small()")
